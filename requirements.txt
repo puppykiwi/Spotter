@@ -1,0 +1,4 @@
+spotify
+requests 
+spotipy 
+requests-oauthlib
