@@ -2,3 +2,4 @@ spotify
 requests 
 spotipy 
 requests-oauthlib
+python-dotenv
