@@ -17,7 +17,7 @@ Before running the script, you need to set up a Spotify Developer account and ob
 1. Clone this repository:
 
     ```
-    git clone https://github.com/puppykiwi/Terminal-player.git
+    git clone https://github.com/puppykiwi/Spotter.git
     ```
 
 2. Install the required Python packages:
