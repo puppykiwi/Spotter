@@ -14,10 +14,15 @@ sp_oauth = SpotifyOAuth(client_id=ID,
 
 token_info = sp_oauth.get_access_token()
 
-print(f"Access Token: {token_info['access_token']}")
-print(f"Refresh Token: {token_info['refresh_token']}")
-
 # Save in temp file
 with open('.env', 'a') as f:
     f.write(f"\nSPOTIPY_ACCESS_TOKEN={token_info['access_token']}")
     f.write(f"\nSPOTIPY_REFRESH_TOKEN={token_info['refresh_token']}")
+
+def get_spotify_client():
+    sp = spotipy.Spotify(auth=token_info['access_token'])
+    return sp
+
+if __name__ == "__main__":
+    sp = get_spotify_client()
+    print(sp.current_playback())
